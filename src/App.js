@@ -6,26 +6,15 @@ import bg from './image/blockchain.jpg';
 import { useEffect } from 'react';
 function App() {
   //store  sender public key in localstorage 
-  localStorage.setItem("publickey","-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzyi6gpqY3+u6VWFDhKXp\nl7NpzPdutOxVy53gHGmG2mN2m9s0rFDPGNI5ogTqBvm8S5oOWDl4B5wGDTH8BQHg\nTlZRWLxbg7rEpkSHtME9y94lO9p6LqmsPms5rNHfyuzUvbaaHUzL803P1+USDGrJ\njtczLQkGwkeAp9qQCJY6bx70DJBfe4DEb6Hs2yTC/JXDjnodTJNZgYvlb/5pki3Y\naUHkvQXaG7u5L63Y14fgWGI+TFxjXULRfU14rU9bYQ2e6NY6U2YVIi2WlSPtT12D\nwOo99LeAaPkcIKgFzdtpakKafglDSboxbMmW3s4WEQS1Oe71wTqXK2qhk3Gq5qEf\niQIDAQAB\n-----END PUBLIC KEY-----")
+  localStorage.setItem(
+    "publickey",
+    "-----BEGIN PUBLIC KEY-----\nMIIBITANBgkqhkiG9w0BAQEFAAOCAQ4AMIIBCQKCAQBoB3ZWOl+yXS2qTz8r64AZ\nmj5OlWjTBt1im5TxleaMu2jw1AlmhLChta6XIRfa3eppy23CBXSDYSa5C6NdXh4G\nksuKpxCmf+y/myD4BlVlnCEN25N1mItRam7n2Rnrkpk3y0lDhbVfCYXovue27nEX\n6ryJhn0S7cnWWX1kWWU96CEdXa8auk0XPs/3AIvji9qtLojikYk0K/I8q7ybdCWF\nLnl8j3gAb/fmK+Zt9UxGC41jV7wUyxRLd3fYKljiOcbPpJ8ntQepb41KPprhCIbQ\nZCOdwqmbu97oR1xhmUi6L+KLyTBPYIDtG2CMIOnTSDPLpej+c9UhlfpbrghuN7ap\nAgMBAAE=\n-----END PUBLIC KEY-----"
+  )
   
-//   const handleInit = async () => {
-    
-//     // try {
-//     //     const response = await fetch('http://localhost:5000/initi', {
-//     //         method: 'POST',
-//     //         headers: {
-//     //             'Content-Type': 'application/json',
-//     //         },
-//     //     });
-//     //     const data = await response.json()
-//     //    console.log(data)
-//     // } catch (error) {
-//     //     console.error('Error fetching balance:', error);
-//     // }
-// };
 
 
- console.log(localStorage.getItem('publicKey'))
+
+ console.log(localStorage.getItem('publickey'))
   return (
     <div className="App bg-gradient-to-r bg-[#1D3565] h-[100vh] font-sans" >
       <Navbar />

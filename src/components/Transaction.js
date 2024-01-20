@@ -12,7 +12,22 @@ function Transaction() {
     console.log(senderPublicKey)
     //to display only certain part of public key
     const truncatedKey = senderPublicKey ? `${senderPublicKey.slice(30, 42)}...` : 'no public key';
-
+    //handle deposite
+    const handleInit = async () => {
+    
+        try {
+            const response = await fetch('http://localhost:5000/initi', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+            const data = await response.json()
+           console.log(data)
+        } catch (error) {
+            console.error('Error fetching balance:', error);
+        }
+    };
     // Function to fetch balance from the API
     const fetchBalance = async () => {
         try {
@@ -74,6 +89,9 @@ function Transaction() {
                     <br></br>
                     <br></br>
                     <div className="flex justify-center mb-4">
+                    <button className="bg-[#E63946]  text-white font-bold py-2 px-4 rounded mx-4 "onClick={handleInit}>
+                            Deposit
+                        </button>
                         <button className="bg-[#E63946]  text-white font-bold py-2 px-4 rounded mx-4">
                             <Link to='/transfer'>Transfer</Link>
                         </button>
